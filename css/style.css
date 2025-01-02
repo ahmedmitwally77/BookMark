@@ -1,0 +1,69 @@
+:root {
+  --heading-family: 'Pacifico', cursive;
+  --paragraph-family: 'Righteous', cursive;
+  --main-family: 'PT Sans Caption', sans-serif;
+  --bg-color: #f7ecde
+}
+
+body {
+  font-family: var(--main-family);
+}
+
+main {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+main section.heading h1 {
+  font-family: var(--heading-family);
+  font-size: 50px;
+  font-weight: 500;
+  color: #352e28;
+  isolation: isolate;
+}
+
+main section.heading h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background-color: #fec260;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: height 0.3s;
+  z-index: -1;
+}
+
+main section.heading h1:hover::after {
+  height: 70%;
+}
+
+section.addbooks {
+  border-style: dotted;
+  border-width: 2px 0 2px 0;
+  border-color: #352e28;
+}
+
+section.addbooks h2 {
+  font-family: var(--paragraph-family);
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text; /*??*/
+  -webkit-text-fill-color: transparent; /*??*/
+}
+
+.btn-primary { /* edit button*/
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+  padding-inline: 50px;
+}
+
+.myTable th,
+.myTable td {
+  padding: 10px;
+}
